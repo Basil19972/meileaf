@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoGeneratorSettingsState">
+    <option name="ignoredFields">
+      <set>
+        <option value="" />
+      </set>
+    </option>
+    <option name="moduleName" value="jwt" />
+    <option name="moduleNameToSettings">
+      <map>
+        <entry key="jwt">
+          <value>
+            <ModuleSettings>
+              <option name="controllerPackageName" value="com.example.jwt.Co" />
+              <option name="controllerParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="dtoParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="entityPackageName" value="com.example.jwt.BO" />
+              <option name="entityParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="generateController" value="true" />
+              <option name="mapperXmlParentDirectory" value="$PROJECT_DIR$/src/main/resources" />
+              <option name="repositoryPackageName" value="com.example.jwt" />
+              <option name="repositoryParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="servicePackageName" value="com.example.jwt.Service" />
+              <option name="serviceParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="voParentDirectory" value="$PROJECT_DIR$/src/main/java" />
+              <option name="voSuffixName" value="" />
+            </ModuleSettings>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="serializable" value="false" />
+    <option name="useLombok" value="false" />
+  </component>
+  <component name="DatabaseSettingsState">
+    <option name="database" value="Teeshop" />
+    <option name="driverClass" value="org.postgresql.Driver" />
+    <option name="driverPath" value="$PROJECT_DIR$/../postgresql-42.4.1.jar" />
+    <option name="port" value="5432" />
+    <option name="schema" value="public" />
+    <option name="url" value="jdbc:postgresql://{host}:{port}/{database}" />
+    <option name="username" value="postgres" />
+  </component>
+</project>

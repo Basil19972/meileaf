@@ -1,0 +1,11 @@
+
+Z
+java:S1128"=Remove this unused import 'com.example.jwt.domain.role.Role'.(©ÞÖÕ8·Ä‚°µ0
+e
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnore'.(þ‘‹„8·Ä‚°µ0
+U
+java:S1128	"9Remove this unused import 'javax.persistence.ManyToMany'.(Àð½8·Ä‚°µ0
+J
+java:S1128".Remove this unused import 'java.util.HashSet'.(Ê‚êX8¸Ä‚°µ0
+L
+java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤þÿÿÿÿ8¸Ä‚°µ0
