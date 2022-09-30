@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.jwt.domain.order.unit.OrderServiceUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-28T08:10:36" hostname="HappyMac.local" time="0.537">
+<testsuite name="com.example.jwt.domain.order.unit.OrderServiceUnitTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-09-29T12:49:36" hostname="happymac.home" time="0.1">
   <properties/>
-  <testcase name="Test1 false" classname="com.example.jwt.domain.order.unit.OrderServiceUnitTest" time="0.537"/>
-  <system-out><![CDATA[Worked
-]]></system-out>
+  <testcase name="Test1 true" classname="com.example.jwt.domain.order.unit.OrderServiceUnitTest" time="0.097"/>
+  <testcase name="Test1 false" classname="com.example.jwt.domain.order.unit.OrderServiceUnitTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

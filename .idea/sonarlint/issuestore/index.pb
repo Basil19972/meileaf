@@ -55,16 +55,12 @@ o
 ?src/main/java/com/example/jwt/domain/order/OrderController.java,b/3/b3e83d5ad0d32d8847fe0724974404b1b9817ee5
 l
 <src/main/java/com/example/jwt/domain/order/dto/OrderDTO.java,2/3/23ac93eeabc57dc18130fae1fc4f3d25ca66dd39
-n
->src/main/java/com/example/jwt/core/generic/ExtendedEntity.java,1/e/1ef8b78452385b5ff582e88577d1678ede7eca9a
 s
 Csrc/main/java/com/example/jwt/core/generic/ExtendedEntityAudit.java,a/8/a8753fe80af588ab8a6f5b210164f04c9d4b99eb
 z
 Jsrc/main/java/com/example/jwt/core/security/CustomAuthorizationFilter.java,0/5/05f66a6e6b7a03610fd58dfc2344b74eda6db1ca
 }
 Msrc/test/java/com/example/jwt/domain/order/unit/OrderRepositoryUnitTests.java,e/0/e05b66ce2c854a44493117fa0fda52110bfefe6d
-€
-Psrc/test/java/com/example/jwt/domain/order/integration/OrderIntegrationTest.java,0/d/0d7f7f3c6575241cad8156ecb07f6f53553ef7a1
 ~
 Nsrc/test/java/com/example/jwt/domain/order/unit/OrderConttrollerUnitTests.java,9/9/99845bcd8837eecfc3f7f33261beea4a41603f1d
 c
@@ -81,8 +77,6 @@ l
 <src/main/java/com/example/jwt/domain/order/OrderService.java,5/2/52cea3c68457cc923d2b819f7be536516368d6c0
 n
 >src/main/java/com/example/jwt/domain/user/UserServiceImpl.java,9/5/9515fcbeb274278b95e231d08450acc582f397e7
-<
-build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 y
 Isrc/test/java/com/example/jwt/domain/order/unit/OrderServiceUnitTest.java,2/b/2bb273f4460908a83dd2d112e589fafad9840df3
 a
