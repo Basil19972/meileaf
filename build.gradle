@@ -7,8 +7,8 @@ plugins {
 
 sonarqube {
     properties {
-       // property "sonar.projectKey", "yagan93_SpringBoot_Testing"
-      //  property "sonar.organization", "yagan93"
+        property "sonar.projectKey", "basil19972"
+        property "sonar.organization", "Basil19972"
         property "sonar.host.url", "https://sonarcloud.io"
     }
 }
