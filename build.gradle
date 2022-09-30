@@ -8,7 +8,7 @@ plugins {
 sonarqube {
     properties {
         property "sonar.projectKey", "Basil19972_meileaf"
-        property "sonar.organization", "Basil19972"
+        property "sonar.organization", "basil19972"
         property "sonar.host.url", "https://sonarcloud.io"
     }
 }
