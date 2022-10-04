@@ -22,6 +22,8 @@ public class CategoryServiceImpl extends ExtendedServiceImpl<Category> implement
 
     public List<CategoryNameWhitCountDTO[]> findCategoryWhitCountFromUser() {
 
+
+
         //Get User UUID
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         Object principal = authentication.getPrincipal();

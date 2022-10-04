@@ -205,7 +205,7 @@ public class OrderServiceImpl extends ExtendedServiceImpl<Order> implements Orde
     }
 
     public boolean isProductOnStock(Map<Product,Long> productLongMap){
-        boolean onStock = true;
+        boolean onStock = false;
 
         for (Map.Entry<Product,Long> entry : productLongMap.entrySet())
 
