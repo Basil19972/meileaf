@@ -73,8 +73,6 @@ g
 7src/main/java/com/example/jwt/core/audit/UserAware.java,a/d/ad8b4e21c036ec5e95e021b4cdca3cc2cd47ca5b
 p
 @src/main/java/com/example/jwt/domain/product/ProduktService.java,9/8/98615be429779bfcbcc3ea1ff4137dc24afe46a5
-t
-Dsrc/main/java/com/example/jwt/domain/product/ProductServiceImpl.java,6/b/6be7adbfdfe61fa71a6294db636ac7ec37a37c2e
 y
 Isrc/test/java/com/example/jwt/domain/order/unit/OrderServiceUnitTest.java,2/b/2bb273f4460908a83dd2d112e589fafad9840df3
 n
@@ -83,8 +81,6 @@ m
 =src/main/java/com/example/jwt/domain/user/UserController.java,c/0/c0ad9206ae0ed92130a1aa3611eae79a5aa0c3fc
 t
 Dsrc/main/java/com/example/jwt/domain/product/ProdukteController.java,8/c/8c068062bcebfdd83dac426e0b2279a38cd980af
-v
-Fsrc/main/java/com/example/jwt/domain/category/CategoryServiceImpl.java,c/d/cdb3af616234f719f0771c1a44d5b514afdb21d4
 u
 Esrc/main/java/com/example/jwt/domain/category/dto/CategoryMapper.java,5/8/586b1c7b0f662a508efc1052fef3bf55e156dd15
 n
