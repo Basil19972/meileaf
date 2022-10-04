@@ -210,8 +210,7 @@ public class OrderServiceImpl extends ExtendedServiceImpl<Order> implements Orde
         for (Map.Entry<Product,Long> entry : productLongMap.entrySet())
 
             if(entry.getKey().getNummber() < entry.getValue() && entry.getKey().getNummber() > 1){
-                onStock = false;
-                onStock = false;
+
                 throw new ProductNotInStockException
                         ("Your Quantity is to High max Products awayable: "+ entry.getKey().getDescription()  + " " + entry.getKey().getNummber());
 
