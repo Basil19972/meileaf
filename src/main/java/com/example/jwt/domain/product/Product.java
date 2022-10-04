@@ -36,6 +36,12 @@ public class Product extends ExtendedEntity {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
+
+
+
+
+
+
     public Product(UUID uuid,long nummber, String description, Country country, Double sellingprice100g, Double buyingprice100g, Date harvestdate, Category category) {
         this.nummber = nummber;
         this.description = description;
