@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  baese:
+    container_name: PostgresDBMeileaf
+    image: postgres:latest
+    restart: on-failure
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: passwort
+      POSTGRES_DB: Teeshop
+    ports:
+      - 5432:5432

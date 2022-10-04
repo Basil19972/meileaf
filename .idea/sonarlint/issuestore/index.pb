@@ -83,8 +83,6 @@ t
 Dsrc/main/java/com/example/jwt/domain/product/ProdukteController.java,8/c/8c068062bcebfdd83dac426e0b2279a38cd980af
 u
 Esrc/main/java/com/example/jwt/domain/category/dto/CategoryMapper.java,5/8/586b1c7b0f662a508efc1052fef3bf55e156dd15
-n
->src/main/java/com/example/jwt/core/generic/ExtendedEntity.java,1/e/1ef8b78452385b5ff582e88577d1678ede7eca9a
 c
 3src/main/java/com/example/jwt/domain/user/User.java,d/6/d60733a6debbb5040c7f7a070481dcb334583398
 s
