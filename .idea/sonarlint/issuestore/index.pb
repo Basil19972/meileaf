@@ -31,8 +31,6 @@ z
 Jsrc/main/java/com/example/jwt/core/security/CustomAuthorizationFilter.java,0/5/05f66a6e6b7a03610fd58dfc2344b74eda6db1ca
 t
 Dsrc/main/java/com/example/jwt/core/exception/UserNot18Exception.java,1/c/1ca9b8e29da14c5a74871afb73ac31e2103035a6
-<
-build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 t
 Dsrc/main/java/com/example/jwt/domain/authority/dto/AuthorityDTO.java,d/e/de9d940b2599fc39c71ecfaccf9c42926e5ac346
 i
