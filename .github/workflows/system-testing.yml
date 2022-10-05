@@ -20,8 +20,8 @@ jobs:
           
       - uses: matt-ball/newman-action@master
         with:
-          collection: 
-          envVar:
+          collection: src/test/java/com/example/jwt/domain/order/system/MeileafTests.postman_collection.json
+          envVar: '[{"key": "API_URL", "value": "https://meileafapp.herokuapp.com"}]'
 
 
  
