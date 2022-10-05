@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "992415aa-4c9e-4079-bbf9-6857849ff7e6",
+		"name": "MeileafTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18004840"
+	},
+	"item": [
+		{
+			"name": "UserTests",
+			"item": [
+				{
+					"name": "RegisterTest",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Response is same as sent\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    var requestdata = JSON.parse(pm.request.body)",
+									"    pm.expect(jsonData.firstName).to.eql(requestdata.firstName);",
+									"    pm.expect(jsonData.lastName).to.eql(requestdata.lastName);",
+									"    pm.expect(jsonData.email).to.eql(requestdata.email);",
+									"    pm.expect(jsonData.roles).not.null;",
+									"});",
+									"",
+									"",
+									"",
+									"      "
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"firstName\":\"bb\",\n        \"lastName\" : \"Peter\",\n        \"age\": 19,\n        \"email\": \"bb.peter@hotmail.ch\",\n        \"password\": 1234\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginTest",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.to.have.status(200)){",
+									"    const token = pm.response.headers.get(\"Authorization\").replace(\"Bearer \", \"\")",
+									"    pm.collectionVariables.set(\"USER_AUTH_TOKEN\", token)",
+									"",
+									"}",
+									"",
+									"",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Authorization is present\", function () {",
+									"    pm.response.to.have.header(\"Authorization\");",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer eyJhbGciOiJIUzM4NCJ9.eyJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUl9SRUFEIn0seyJhdXRob3JpdHkiOiJPUkRFUl9XUklURSJ9LHsiYXV0aG9yaXR5IjoiQ0FURUdPUllfUkVBRCJ9LHsiYXV0aG9yaXR5IjoiUFJPRFVDVF9SRUFEIn0seyJhdXRob3JpdHkiOiJPUkRFUl9SRUFEIn1dLCJzdWIiOiI3ZjAwMDAwMS04MmEwLTE3ZWQtODE4Mi1hMGI4ZDFmNDAwMDAiLCJpYXQiOjE2NjA1NTM4NDUsImV4cCI6MTY2MDY0MDI0NSwiaXNzIjoic2VjdXJpdHlBcHAifQ.Q9LSpD3HStxmrOqan33fCfGAr69DRMLU9SBARsclf4kEkIb9Oow2yiX4icT9j3Le",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "       {\n        \"email\": \"bb.peter@hotmail.ch\",\n        \"password\": 1234\n       }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/users/login",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Test",
+			"item": [
+				{
+					"name": "ShowProducts Test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"describtion\");",
+									"    pm.expect(pm.response.text()).to.include(\"country\");",
+									"    pm.expect(pm.response.text()).to.include(\"sellingprice100g\");",
+									"    pm.expect(pm.response.text()).to.include(\"buyingprice100g\");",
+									"    pm.expect(pm.response.text()).to.include(\"buyingprice100g\");",
+									"    pm.expect(pm.response.text()).to.include(\"harvestdate\");",
+									"    pm.expect(pm.response.text()).to.include(\"category\");",
+									"    pm.expect(pm.response.text()).to.include(\"required_age\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Country Name from Prodcut\", function () {",
+									"    var jsonData = pm.response.json();",
+									"",
+									"    for(let i = 0; i < jsonData.length; i++){",
+									"        pm.expect(jsonData[i].country.countryname).to.eql(\"China\")",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/products",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderTest",
+			"item": [
+				{
+					"name": "TeeOrder Test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Your test name\", function () {",
+									"    var requestdata = JSON.parse(pm.request.body)",
+									"    ",
+									"    var jsonData = pm.response.json();",
+									"   // pm.expect(jsonData.status).to.eql(true);",
+									"   //pm.expect(jsonData.appuser).not.null;",
+									"",
+									"    for(let i = 0; i < jsonData.placeOrders.length; i++){",
+									"   ",
+									"",
+									"            pm.expect(jsonData.placeOrders[i].product.id).not.null;",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"placeOrders\": [\n        {\n            \"quantity\": 1,\n            \"product\": {\n                \"id\": \"aa997b32-b308-4af5-a7a2-db5dd0eb9db3\"\n            }\n        },\n         {\n            \"quantity\": 1,\n            \"product\": {\n                \"id\": \"10e3e447-a7e5-41a3-8855-ee828798bb53\"\n            }\n        }\n\n        \n    \n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/order",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{USER_AUTH_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "USER_AUTH_TOKEN",
+			"value": ""
+		}
+	]
+}
