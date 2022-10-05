@@ -2,7 +2,7 @@ name: First Pipeline
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [ "development" ]
 
 permissions:
   contents: read
