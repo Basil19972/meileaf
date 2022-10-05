@@ -6,8 +6,8 @@ services:
     image: postgres:latest
     restart: on-failure
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: passwort
+      POSTGRES_USER: postgres1
+      POSTGRES_PASSWORD: passwort1
       POSTGRES_DB: Teeshop
     ports:
       - 5432:5432
