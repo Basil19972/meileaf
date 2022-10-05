@@ -14,9 +14,9 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           branch: release
-          heroku_api_key:
-          heroku_app_name:
-          heroku_email:
+          heroku_api_key: ${{HEROKU_API_KEY}}
+          heroku_app_name: "meileafapp"
+          heroku_email: "basil.peter@hotmail.ch"
           
       - uses: matt-ball/newman-action@master
         with:
