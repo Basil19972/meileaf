@@ -50,12 +50,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/users/register",
-							"protocol": "http",
+							"raw": "{{API_URL}}/users/register",
 							"host": [
-								"localhost"
+								"{{API_URL}}"
 							],
-							"port": "8080",
 							"path": [
 								"users",
 								"register"
