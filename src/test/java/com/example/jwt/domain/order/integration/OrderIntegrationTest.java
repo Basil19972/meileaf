@@ -112,4 +112,6 @@ public class OrderIntegrationTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$[*].discount").value(Matchers.containsInAnyOrder(dummyOrders.get(0).getDiscount(), dummyOrders.get(1).getDiscount())))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[*].totalPrice").exists());
     }
+
+    // Post test got lost?
 }
