@@ -22,7 +22,7 @@ jobs:
 
           # The authentication using token
           # This will override the Authorization header, for example Authorization: Bearer QWxhZGRpbjpPcGVuU2VzYW1l
-          bearer-token: ${{ secrets.BEARER_TOKEN_HEROKU_PRODUCTION }}
+          bearer-token: ${{ secrets.HEROKU_API_KEY }}
 
 
 
