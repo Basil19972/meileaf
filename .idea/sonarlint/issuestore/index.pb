@@ -73,14 +73,10 @@ s
 Csrc/main/java/com/example/jwt/core/generic/ExtendedServiceImpl.java,7/3/73c72dc4fcebf57cc7b1858071579cd170ad2cff
 n
 >src/main/java/com/example/jwt/core/generic/ExtendedEntity.java,1/e/1ef8b78452385b5ff582e88577d1678ede7eca9a
-i
-9src/main/java/com/example/jwt/domain/product/Product.java,5/0/50a8b2739a645c66d6d7932f2a5269299d9133e7
 n
 >src/main/java/com/example/jwt/core/generic/ExtendedMapper.java,5/d/5dad5838ee9d9eb1bf46591d72d71ebf6f9b4ebe
 t
 Dsrc/main/java/com/example/jwt/domain/product/ProductServiceImpl.java,6/b/6be7adbfdfe61fa71a6294db636ac7ec37a37c2e
-`
-0src/main/java/com/example/jwt/docker-compose.yml,5/7/577d0c8fc5b422badcab6a491b8c9540f71eab13
 s
 Csrc/main/java/com/example/jwt/domain/product/ProductRepository.java,2/c/2c52ca741812010db7aa97956e7320c825e2b738
 a
