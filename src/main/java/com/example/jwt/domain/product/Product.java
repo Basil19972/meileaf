@@ -37,7 +37,7 @@ public class Product extends ExtendedEntity {
     private Category category;
 
 
-
+//changes to trigger pipeline
 
 
 
