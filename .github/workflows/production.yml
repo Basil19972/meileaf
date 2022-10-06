@@ -1,0 +1,69 @@
+name: Example of cURL action
+
+on: [push]
+jobs:
+  test-curl-action:
+    name: "Send App in Production"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Call API"
+        uses: indiesdev/curl@v1.1
+        with:
+          # The target URL
+          # Required: true if custom-config is not set
+          url: https://api.heroku.com/pipeline-promotions
+
+          # The request method, basically it's one of GET|POST|PUT|PATCH
+          # Default is GET
+          method: "POST"
+
+          # List of response status codes to be accepted, else it will set the job to be failed
+          # If more than one value is needed, you can use comma(,) as seperator
+          # In this case if the response status code is not one of 200, 201 and 204, the job will be failed
+          # Default is 200,201,204
+          accept: 201
+
+          # Headers can be passed through json object string
+          headers: '{ "Authorization": "Bearer 56d28586-265b-4e1d-90c1-5b20dc9d9705" }'
+
+          # Params can be passed through json object string
+          # params: '{ "param1": "value", "param2": "value2" }'
+
+          # Body request
+          # Apply only to POST|PUT request
+          body: '{"pipeline":{"id":"25d6b52e-ad5b-424a-832d-69b13d6481c1"},"source":{"app":{"id":"fb33ce03-1971-45f0-8829-83a431a9b53a"}},"targets":[{"app":{"id":"6931d598-a4ee-41c5-9105-b24e03d5ac6e"}}]}'
+
+          # Request timeout (millisec)
+          # Default: 1000
+          timeout: 1000
+
+          # Basic authentication using username and password
+          # This will override the Authorization header, for example Authorization: Basic QWxhZGRpbjpPcGVuU2VzYW1l
+          # Format => username:password as base 64
+          # basic-auth-token: ${{ secrets.curl_auth_token }}
+
+          # The authentication using token
+          # This will override the Authorization header, for example Authorization: Bearer QWxhZGRpbjpPcGVuU2VzYW1l
+          # bearer-token: ${{ secrets.bearer_token }}
+
+          # If you want to use proxy with the request, you can use proxy-url
+          # Format => host:port
+          # proxy-url: https://proxy-url:3000
+
+          # If the proxy host requires the authentication, you can use proxy-auth to pass credentials
+          # Format => username:password as base64
+          # proxy-auth-token: ${{ secrets.proxy_auth_token }}
+
+          # If it is set to true, it will show the response log in the Github UI
+          # Default: false
+          # log-response: false
+
+          # Retries specify the number of retry attemps before giving up.
+          # Default: 1
+          # retries: 3
+
+          # If you want to use axios config directly, you can pass config file to the action
+          # The file is just basically a json file that has the same format as axios config https://github.com/axios/axios#request-config
+          # If this input is set, it will ignore other inputs that related to the config
+          # The path file is start from root directory of the repo
+          # custom-config: .github/workflows/curl-config.json
